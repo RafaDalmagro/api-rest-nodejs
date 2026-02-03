@@ -1,12 +1,17 @@
 import fastfy from "fastify";
+import crypto from "node:crypto";
+
 import { db } from "./database";
 
 const app = fastfy();
 
 app.get("/hello", async () => {
-    const test = await db("sqlite_schema").select("*").first();
+    const transaction = await db("transactions")
+        .where("amount", "<", 10000)
+        .select("*")
+        .returning("*");
 
-    return test;
+    return transaction;
 });
 
 app.listen({ port: 3000 }).then(() => {
