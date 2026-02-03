@@ -1,11 +1,11 @@
 {
     "name": "api-rest-nodejs",
     "version": "1.0.0",
+    "type": "module",
     "description": "API REST with Node.js and TypeScript and Fastify",
     "main": "src/server.ts",
     "scripts": {
-        "dev": "tsx watch src/server.ts",
-        "start": "node dist/server.js"
+        "dev": "tsx watch src/server.ts"
     },
     "keywords": [
         "api",
@@ -16,6 +16,8 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@types/node": "^25.2.0",
+        "tsx": "^4.21.0",
         "typescript": "^5.9.3"
     },
     "dependencies": {
