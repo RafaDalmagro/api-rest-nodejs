@@ -1,16 +1,11 @@
 import fastfy from "fastify";
 import { env } from "./env";
-import { db } from "./database";
+import { transactionRoutes } from "./routes/transactions";
 
 const app = fastfy();
 
-app.get("/hello", async () => {
-    const transaction = await db("transactions")
-        .where("amount", "<", 10000)
-        .select("*")
-        .returning("*");
-
-    return transaction;
+app.register(transactionRoutes, {
+    prefix: "transactions",
 });
 
 app.listen({ port: Number(env.PORT) }).then(() => {
