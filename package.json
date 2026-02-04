@@ -6,7 +6,8 @@
     "main": "src/server.ts",
     "scripts": {
         "dev": "tsx watch src/server.ts",
-        "knex": "node --import tsx ./node_modules/knex/bin/cli.js"
+        "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
+        "test": "vitest"
     },
     "keywords": [
         "api",
@@ -18,8 +19,11 @@
     "license": "ISC",
     "devDependencies": {
         "@types/node": "^25.2.0",
+        "@types/supertest": "^6.0.3",
+        "supertest": "^7.2.2",
         "tsx": "^4.21.0",
-        "typescript": "^5.9.3"
+        "typescript": "^5.9.3",
+        "vitest": "^4.0.18"
     },
     "dependencies": {
         "@fastify/cookie": "^11.0.2",
