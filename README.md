@@ -55,8 +55,8 @@ npm run knex migrate:latest
 ## 📐 Regras de Negócio
 
 - [X] A transação deve ser do tipo crédito que somará ao valor total, ou débito que subtrairá;
-- [ ] Deve ser possível identificarmos o usuário entre as requisições;
-- [ ] O usuário só pode visualizar transações que ele criou;
+- [X] Deve ser possível identificarmos o usuário entre as requisições;
+- [X] O usuário só pode visualizar transações que ele criou;
 
 ## 🎯 Requisitos Não Funcionais
 

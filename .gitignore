@@ -1,4 +1,8 @@
+# Dependencies
 /node_modules
-/dist
-/db/database.db
+# Build output
+/build
+# Database files
+/db/*
+# Environment variables
 .env
